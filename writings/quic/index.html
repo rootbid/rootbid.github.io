@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  
+    
+  
+  <meta name="description" content="A gentle Theoretical Introduction.">
+
+  <title>HTTP&#x2F;3 - HTTP over QUIC</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rootbid.github.io/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://rootbid.github.io/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://rootbid.github.io/img/apple-touch-icon.png">
+  
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #5871a210;
+    --bg-color: #ffffff;
+    --text-color: #2f3030;
+    --text-pale-color: #767676;
+    --text-decoration-color: #a9a9a9;
+    --highlight-mark-color: #5f75b020;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #268556;
+    --callout-important-color: #885fc9;
+    --callout-warning-color: #ab6632;
+    --callout-caution-color: #c64e4e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #6f8fd112;
+    --bg-color: #1c1c1c;
+    --text-color: #c1c1c1;
+    --text-pale-color: #848484;
+    --text-decoration-color: #5f5f5f;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #47976f;
+    --callout-important-color: #9776cd;
+    --callout-warning-color: #ad7a52;
+    --callout-caution-color: #d06161;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 16px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+</style>
+
+  <link rel="stylesheet" href="https://rootbid.github.io/main.css">
+  
+
+<link id="hl" rel="stylesheet" type="text/css" href="/hl-light.css" />
+
+
+
+  
+</head>
+
+<body class="post">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://rootbid.github.io/hl-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <div id="blank"></div>
+  <aside>
+    
+    
+    <nav>
+      <ul>
+        
+        <li>
+          <a class="h2" href="#quic-quick-udp-internet-connections">QUIC (Quick UDP Internet Connections)</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#the-hyper-text-transfer-protocol">The Hyper Text Transfer Protocol</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#projects">Projects</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#suggested-readings">Suggested Readings</a>
+          
+        </li>
+        
+      </ul>
+    </nav>
+    
+    
+    <button id="back-to-top" aria-label="back to top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+
+    </button>
+    
+  </aside>
+  <main>
+    
+<header>
+  <nav>
+    <a href="https:&#x2F;&#x2F;rootbid.github.io&#x2F;writings">← Back</a>
+  </nav>
+</header>
+
+
+    <div>
+      
+      
+      
+      
+      <div id="copy-cfg" style="display: none;" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+"></div>
+      
+      <article class="prose">
+        <h1>HTTP&#x2F;3 - HTTP over QUIC</h1>
+        <div id="post-info">
+          <div id="date">
+            <span id="publish">Oct 25, 2019</span>
+            </div>
+
+          
+        </div>
+
+        
+        
+
+        
+
+        <p>As I am sipping down my morning coffee and read my Twitter feed, my app is making multiple API calls over HTTPS to Twitter's servers somewhere on the Internet. Those HTTPS connections are running over TCP via my home WiFi and broadband connection. All's well, the WiFi connection has the least inference, the broadband connection is stable and so there's no packet loss. Those are perfect conditions for HTTPS running over TCP. Not a packet dropped, no congestion. HTTP/2 loves these perfect conditions too, where multiple streams of requests and responses are being transferred between my phone and servers. Unlike HTTP/1.1, HTTP/2 is able to use a single TCP connection for multiple, simultaneous requests with a significant speed advantage under similar conditions.</p>
+<p>As my day boots, I step out of my house to be at work. My phone silently switches from my home WiFi to 4G changing the IP address associated with my phone, the TCP connections in use between my phone and Twitter's servers are now in trouble. The connections either stall or get dropped with a delay while internal timers informs my app that the cnnections have disappeared or as connections are re-established. All the connections are suddenly silent.</p>
+<p>It might be tempting to blame it on my ISP, but in actual Internet was not designed to work this way. We weren't meant to be carrying around pocket supercomputers that roam across lossy, noisy networks all the while trying to remain productive while complaining about sub-seccond delays in app response time.</p>
+<hr />
+<h3 id="quic-quick-udp-internet-connections">QUIC (Quick UDP Internet Connections)<a class="zola-anchor" href="#quic-quick-udp-internet-connections" aria-label="Anchor link for: quic-quick-udp-internet-connections" style="visibility: hidden;"></a>
+</h3>
+<p>A proposed solution to these problems is QUIC (Quick UDP Internet Connections), a new transport designed from the ground up to improve performance for HTTPS traffic with a new way to send packets across the Internet.</p>
+<p>QUIC is an encrypted-by-default Internet transfer protocol, which replaces most of the traditional HTTPS stack: HTTP/2, TLS and TCP. QUIC makes an HTTPS connection between a computer and server with a collection of technologies:</p>
+<ul>
+<li><strong>UDP replacing TCP.</strong> UDP is widely used for fire-and-forget protocols where packets are sent but their arrival or ordering in not guranteed (while TCP guarantees arrival order and delivery at a cost). Because UDP doesn't have TCP's guarantees it allows developers to innovate new protocols (on top of UDP) that do guarantee delivery and ordering and can incorporate features that TCP lacks.</li>
+</ul>
+<p><img src="/img/quic/HTTP_3_stack.jpg" alt="HTTP/2 stack vs HTTP/3 stack" /></p>
+<ul>
+<li>
+<p><strong>Reliable data transfers.</strong> While UDP is not a reliable transport, QUIC adds a layer on top of UDP that introduces reliability. It offers re-transmission of packets, congestion control, pacing and other features otherwise present in TCP.</p>
+</li>
+<li>
+<p><strong>Multiple streams within connections.</strong> Similar to SCTP, SSH and HTTP/2, QUIC features separate logical streams within the physical connections (parallel streams, transferring data simultaneously over a single connection without affecting the others). A connection is a negotiated setup between two end-points similar to how TCP works. A QUIC connection is made to a UDP port and IP address, but once established the connection is associated by its <em>'connnection ID'</em>.
+Over an established connection, either side can create streams and send data to the other end.</p>
+</li>
+<li>
+<p><strong>In order delivery.</strong> QUIC guarantees in-order delivery of streams independently. This means that each stream will send data and maintain data order, but different streams may be delivered out-of-order.</p>
+</li>
+<li>
+<p><strong>Fast handshakes.</strong> QUIC offers both 0-RTT and 1-RTT connection setups, meaning that at best QUIC needs no extra round-trips at all when setting up a new connection.</p>
+</li>
+</ul>
+<p><a rel="nofollow noreferrer" href="https://cloudplatform.googleblog.com/2018/06/Introducing-QUIC-support-for-HTTPS-load-balancing.html"><img src="/img/quic/handshakes.gif" alt="handshakes" /></a></p>
+<ul>
+<li>
+<p><strong>Early data.</strong> QUIC allows a client to include data in the 0-RTT handshake. This feature allows a client to deliver data to the peer as fast as it possibly can, and that then of course allows the server to respond and send data back even sooner.</p>
+</li>
+<li>
+<p><strong>TLS 1.3</strong> QUIC's transport security is TLS 1.3 (<a rel="nofollow noreferrer" href="https://tools.ietf.org/html/rfc8446https://tools.ietf.org/html/rfc8446">RFC 8446</a>) and there are never any unencrypted QUIC connections.</p>
+</li>
+<li>
+<p><strong>Transport and Application level.</strong> QUIC is a transport protocol, which allows the use to other application protocols. The initial application layer protocol is HTTP/3.</p>
+</li>
+<li>
+<p><strong>HTTP/3 over QUIC.</strong> HTTP/3 does HTTp-style transports, including HTTP header compression using QPACK - which is similar to HTTP/2 compression named HPACK.
+The HPACk algorithm depends on an ordered delivery of streams so it was not possible to reuse it for HTTP/3, since QUIC offers streams that can be delivered out-of-order.</p>
+</li>
+</ul>
+<h3 id="the-hyper-text-transfer-protocol">The Hyper Text Transfer Protocol<a class="zola-anchor" href="#the-hyper-text-transfer-protocol" aria-label="Anchor link for: the-hyper-text-transfer-protocol" style="visibility: hidden;"></a>
+</h3>
+<p>HTTP powers the Web(Internet), it's life began with the HTTP/0.9 protocol in 1991. By 1997 it had evolved to HTTP/1.1, which was standardised within the IETF (Internet Engineering Task Force). After a long life adoption of the protocol and growing number of users on the Web, the ever changing needs on the Web called for a better suited protocol, which is now known as HTTP/2 emerging in 2015. More recently the IETF is intending to deliver a new version - HTTP/3. The motivation for a new protocol was to overcome inefficiencies by the latter facing today’s complexity of the Web.</p>
+<p>HTTP/3 is promising, it is set to deliver better performance and security on the Web. Cloudflare, Mozilla and Google have already started implementations while working closely with IETF peers. Open source software and communities have also tracked the advancements in the protocol, implemeting experimental support in their projects (<a rel="nofollow noreferrer" href="https://github.com/curl/curl/wiki/HTTP3">announcement for HTTP/3 support in curl</a>).</p>
+<h3 id="projects">Projects<a class="zola-anchor" href="#projects" aria-label="Anchor link for: projects" style="visibility: hidden;"></a>
+</h3>
+<ol>
+<li><a rel="nofollow noreferrer" href="https://github.com/quicwg/base-drafts/wiki/Implementations">Implementations of the QUIC transport protocol</a></li>
+</ol>
+<h3 id="suggested-readings">Suggested Readings<a class="zola-anchor" href="#suggested-readings" aria-label="Anchor link for: suggested-readings" style="visibility: hidden;"></a>
+</h3>
+<ol>
+<li><a rel="nofollow noreferrer" href="https://blog.cloudflare.com/the-road-to-quic/">The Road to QUIC</a></li>
+<li><a rel="nofollow noreferrer" href="https://quicwg.org/base-drafts/draft-ietf-quic-http.html">HTTP Version 3</a></li>
+<li><a rel="nofollow noreferrer" href="https://datatracker.ietf.org/doc/draft-ietf-quic-transport/?include_text=1">QUIC (Active Internet-draft)</a></li>
+</ol>
+
+      </article>
+
+      
+      
+
+      
+      
+    </div>
+
+    
+
+
+<footer>
+  <div class="left">
+    <div class="copyright">
+      
+      
+    </div>
+  </div>
+
+  <div class="right">
+    
+    
+      
+    
+    
+    <a id="rss-btn" href="https://rootbid.github.io/writings/feed.xml">RSS</a>
+    
+    
+
+    
+    
+    
+    <button id="theme-toggle" aria-label="theme switch">
+      <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+      <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+    </button>
+    
+  </div>
+</footer>
+
+
+
+
+<dialog id="rss-mask">
+  <div>
+    <a href="https:&#x2F;&#x2F;rootbid.github.io&#x2F;writings&#x2F;feed.xml">https:&#x2F;&#x2F;rootbid.github.io&#x2F;writings&#x2F;feed.xml</a>
+    
+    
+    <button autofocus aria-label="copy" data-link="https:&#x2F;&#x2F;rootbid.github.io&#x2F;writings&#x2F;feed.xml" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" fill="currentColor"></path></svg>
+
+    </button>
+  </div>
+</dialog>
+
+
+
+  </main>
+</div>
+
+  
+<script src="/js/lightense.min.js"></script>
+
+
+  <script src="https://rootbid.github.io/js/main.js"></script>
+</body>
+
+</html>
