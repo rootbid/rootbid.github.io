@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://rootbid.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/categories/</loc>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/tags/</loc>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/</loc>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/it-act/</loc>
+        <lastmod>2022-12-05T22:49:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/messengers/</loc>
+        <lastmod>2025-09-30T11:49:10+05:30</lastmod>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/protect-digital-privacy/</loc>
+        <lastmod>2022-11-15T15:22:17+05:30</lastmod>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/quic/</loc>
+        <lastmod>2019-10-25T15:01:03-05:00</lastmod>
+    </url>
+    <url>
+        <loc>https://rootbid.github.io/writings/saving-planet-earth/</loc>
+        <lastmod>2021-10-02T12:52:10+05:30</lastmod>
+    </url>
+</urlset>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>writings</title>
+	<subtitle>things that I get to know</subtitle>
+	<link href="https://rootbid.github.io/writings/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://rootbid.github.io/writings/"/>
+	<updated>2025-09-30T11:49:10+05:30</updated>
+	<id>https://rootbid.github.io/writings/feed.xml</id>
+	<entry xml:lang="en">
+		<title>Choosing a Messaging App: A Critical Guide for Indian Users</title>
+		<published>2025-09-30T11:49:10+05:30</published>
+		<updated>2025-09-30T11:49:10+05:30</updated>
+		<link href="https://rootbid.github.io/writings/messengers/" type="text/html"/>
+		<id>https://rootbid.github.io/writings/messengers/</id>
+		<content type="html">&lt;p&gt;In a digital age where communication happens in seconds, the choice of a messaging app is more than convenience - it&#x27;s about privacy, control, and security. For Indian users, this choice requires clear-eyed examination beyond catchy slogans and glossy marketing. The question is simple yet complex: Which app truly respects your private conversations?&lt;&#x2F;p&gt;
+&lt;p&gt;Understanding what privacy means here is essential. Encryption is often touted as the gold standard. But what does it mean in practice? Encryption should ensure that only the sender and receiver can read your messages, with no backdoors for corporations or governments. An app like Signal does this by encrypting every message and call, and storing minimal data about you. This contrasts with apps that may protect message content but collect metadata - the who, when, and where of your communication - that can be equally revealing.&lt;&#x2F;p&gt;
+&lt;p&gt;Data collection is not uniform across platforms. WhatsApp, for example, encrypts your chats end-to-end, but collects and shares significant metadata with its parent company Meta for advertising and other purposes. Arattai, the Indian homegrown contender, is transparent about its data use and shares minimal data, but only encrypts voice calls -not text messages yet. Each difference is meaningful.&lt;&#x2F;p&gt;
+&lt;p&gt;Transparency around data is critical. Not just what is collected, but how it is used, shared, and protected. Can you access and control your information? Can you delete it? Are you informed proactively of changes to privacy policies? These are questions sometimes overlooked in the rush to switch apps.&lt;&#x2F;p&gt;
+&lt;p&gt;Ownership and motivation matter. A non-profit app driven by privacy ideals will likely not turn around to commodify your data. Contrast that with for-profit giants whose business models may rely on leveraging your information. Understanding this helps you assess long-term trust.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Here are practical questions Indian users should ask before choosing,&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Is every form of communication end-to-end encrypted by default?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;What metadata is collected and retained, and for how long?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Can I access, correct, or delete my data easily?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;How transparent is the company about data sharing, especially with governments?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;What motivates the app&#x27;s business model?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Has the app undergone independent security audits or made its code open-source?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Choosing wisely means resisting the herd mentality - the tendency to adopt an app simply because friends, family, or the majority are using it. While social influence is powerful and often drives app adoption, following the crowd without critical evaluation risks surrendering privacy and security to convenience. Instead, users should cultivate curiosity and skepticism, digging beneath surface-level popularity to question how well the app protects their conversations and metadata.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;privacy-security-comparison-table&quot;&gt;Privacy &amp;amp; Security Comparison Table&lt;a class=&quot;zola-anchor&quot; href=&quot;#privacy-security-comparison-table&quot; aria-label=&quot;Anchor link for: privacy-security-comparison-table&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&#x2F;Aspect&lt;&#x2F;th&gt;&lt;th&gt;Signal&lt;&#x2F;th&gt;&lt;th&gt;WhatsApp&lt;&#x2F;th&gt;&lt;th&gt;Arattai&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;End-to-end encryption&lt;&#x2F;td&gt;&lt;td&gt;Yes, messages &amp;amp; calls by default&lt;&#x2F;td&gt;&lt;td&gt;Yes, messages &amp;amp; calls by default (using Signal protocol)&lt;&#x2F;td&gt;&lt;td&gt;Only calls encrypted currently&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Metadata collection&lt;&#x2F;td&gt;&lt;td&gt;Minimal; only phone number&lt;&#x2F;td&gt;&lt;td&gt;Extensive metadata collection shared with Meta&lt;&#x2F;td&gt;&lt;td&gt;Limited metadata; collects usage data, device info, contact list&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Data sharing with government&lt;&#x2F;td&gt;&lt;td&gt;Refuses backdoors; resists data requests&lt;&#x2F;td&gt;&lt;td&gt;Complies with government data requests; shares metadata&lt;&#x2F;td&gt;&lt;td&gt;Shares data with authorities as per legal requirements&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Transparency &amp;amp; user control&lt;&#x2F;td&gt;&lt;td&gt;Open-source code; user can control data&lt;&#x2F;td&gt;&lt;td&gt;Closed-source; provides some user controls; policy complex&lt;&#x2F;td&gt;&lt;td&gt;Privacy policy disclosed; user can access&#x2F;modify personal data&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Business model&lt;&#x2F;td&gt;&lt;td&gt;Non-profit, privacy-first&lt;&#x2F;td&gt;&lt;td&gt;For-profit, ad-driven by Meta ecosystem&lt;&#x2F;td&gt;&lt;td&gt;Indian-owned, data not sold or traded&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;This isn&#x27;t just about software - it&#x27;s about digital rights, bodily autonomy manifest in code, and the kind of digital democracy India wants to build. Users hold power. By demanding strong privacy guarantees and transparent practices, you shape an ecosystem that respects privacy rather than erodes it. Choose your app not just as a tool, but as a statement of the kind of privacy you expect and deserve. The future of private communication in India depends on it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;a class=&quot;zola-anchor&quot; href=&quot;#further-reading&quot; aria-label=&quot;Anchor link for: further-reading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Arattai: &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.arattai.in&#x2F;privacy.html&quot;&gt;Privacy Policy and Terms of Use&lt;&#x2F;a&gt; &amp;amp; &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.arattai.in&#x2F;faq.html&quot;&gt;FAQs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;WhatsApp: &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.whatsapp.com&#x2F;privacy&quot;&gt;Privay Policy&lt;&#x2F;a&gt; &amp;amp; &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.mindstick.com&#x2F;news&#x2F;4510&#x2F;5-essential-whatsapp-privacy-features-to-enable-in-2025&quot;&gt;Privacy Features to Enable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Signal: &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;signal.org&#x2F;legal&#x2F;&quot;&gt;Terms &amp;amp; Privacy Policy&lt;&#x2F;a&gt; &amp;amp; &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;support.signal.org&#x2F;hc&#x2F;en-us&#x2F;categories&#x2F;360000674811-Security&quot;&gt;Security FAQ&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Data protections under the IT Act</title>
+		<published>2022-12-05T22:49:10+05:30</published>
+		<updated>2022-12-05T22:49:10+05:30</updated>
+		<link href="https://rootbid.github.io/writings/it-act/" type="text/html"/>
+		<id>https://rootbid.github.io/writings/it-act/</id>
+		<content type="html">&lt;p&gt;The Information Technology Act (IT Act) is a law in India that provides a legal framework for the use of electronic communications and transactions. The Act applies to a wide range of activities, including the use of computers, the internet, and other digital technologies. The IT Act covers a variety of topics, including cybercrime, digital signatures, and the collection, use, and disclosure of personal data.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the key provisions of the IT Act is the protection of individuals&#x27; personal data. The Act defines personal data as any information that relates to an individual who can be identified, directly or indirectly, from that information. This includes information like name, address, telephone number, email address, and other personal details.&lt;&#x2F;p&gt;
+&lt;p&gt;Under the IT Act, organizations are required to obtain the consent of individuals before collecting, using, or disclosing their personal data. This means that individuals have the right to control how their personal data is collected, used, and disclosed by organizations. Additionally, the Act provides individuals with the right to access and correct their personal data, as well as the right to request that their personal data be deleted.&lt;&#x2F;p&gt;
+&lt;p&gt;The IT Act also includes provisions for the protection of children&#x27;s personal data. In particular, the Act requires organizations to obtain the consent of a child&#x27;s parent or guardian before collecting, using, or disclosing the personal data of a child under the age of 18. This is intended to ensure that children are protected from the potential risks of sharing their personal data online.&lt;&#x2F;p&gt;
+&lt;p&gt;In addition to these protections, the IT Act also includes provisions for the reporting of data breaches. Under the Act, organizations are required to report certain types of data breaches to the relevant authorities within 72 hours of discovery. This is intended to ensure that individuals are notified of potential risks to their personal data in a timely manner, and that appropriate steps can be taken to address the breach and protect individuals&#x27; personal data.&lt;&#x2F;p&gt;
+&lt;p&gt;Overall, the IT Act provides important protections for individuals&#x27; personal data, and gives individuals the right to control how their personal data is collected, used, and disclosed by organizations. By understanding their rights and obligations under the Act, individuals can take steps to protect their personal data and maintain their privacy online.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Protect your digital privacy</title>
+		<published>2022-11-15T15:22:17+05:30</published>
+		<updated>2022-11-15T15:22:17+05:30</updated>
+		<link href="https://rootbid.github.io/writings/protect-digital-privacy/" type="text/html"/>
+		<id>https://rootbid.github.io/writings/protect-digital-privacy/</id>
+		<content type="html">&lt;p&gt;Digital privacy is a growing concern in the modern world, where technology allows us to share more personal information online than ever before. As we increasingly rely on the internet to communicate, shop, and access entertainment, it&#x27;s important to take steps to protect our digital privacy. Here are some of the most important things you can do to protect your digital privacy,&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use strong and unique passwords for your online accounts. Avoid using the same password for multiple accounts, and make sure your passwords are long and complex to make them difficult to guess. Use a password manager.&lt;&#x2F;li&gt;
+&lt;li&gt;Be cautious about the information you share online. Think carefully before posting personal information, such as your address, phone number, or date of birth, on social media or other websites.&lt;&#x2F;li&gt;
+&lt;li&gt;Use privacy settings on social media and other platforms to control who can see your posts and personal information. Regularly review these settings and update them as needed.&lt;&#x2F;li&gt;
+&lt;li&gt;Avoid using public Wi-Fi networks to access sensitive information, such as online banking or shopping. These networks are often unsecured and can make it easier for others to access your personal information.&lt;&#x2F;li&gt;
+&lt;li&gt;Use a virtual private network (VPN) when accessing the internet from a public location, such as a coffee shop or library. A VPN encrypts your internet connection and can help protect your online activity from being monitored.&lt;&#x2F;li&gt;
+&lt;li&gt;Be wary of scams and phishing attempts. Don&#x27;t click on links or download attachments from unknown sources, and be cautious when providing personal information online.&lt;&#x2F;li&gt;
+&lt;li&gt;Use security software, such as antivirus and firewalls, to protect your devices from malware and other online threats. Keep this software up to date to ensure that your devices are protected.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;By taking these steps to protect your digital privacy, you can help keep your personal information safe from unauthorized access and use. It&#x27;s important to be aware of the potential threats to your privacy and take steps to safeguard your personal information.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Saving planet Earth</title>
+		<published>2021-10-02T12:52:10+05:30</published>
+		<updated>2021-10-02T12:52:10+05:30</updated>
+		<link href="https://rootbid.github.io/writings/saving-planet-earth/" type="text/html"/>
+		<id>https://rootbid.github.io/writings/saving-planet-earth/</id>
+		<content type="html">&lt;p&gt;Atmosphere is what allows life on Earth, it&#x27;s a layer of gases surrounding the
+planet that is retained by the planet&#x27;s gravity. Carbon dioxide is the most
+significant long-lived gas in our atmosphere which is responsible for life on
+Earth. Without carbon dioxide the light from the sun falling on earth would simply bounce back into
+space, while the presence of carbon dioxide absorbs the light from sun and
+allow heating the planet for life to exist. From the dawn of Industrial Revolution (use of fossil fuels and deforestation),
+we have rapidly increased the concentration of carbon dioxide in the
+atmosphere; leading to global warming. It&#x27;s threatening to push the planet past a tipping point
+beyond which climate change would be difficult to stop and It’s suicidal to
+think that we can do nothing and continue like that for centuries.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;understanding-the-problem&quot;&gt;Understanding the problem&lt;a class=&quot;zola-anchor&quot; href=&quot;#understanding-the-problem&quot; aria-label=&quot;Anchor link for: understanding-the-problem&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As mathematics teaches us, the first step towards a solution is to define the
+problem(s).&lt;&#x2F;p&gt;
+&lt;p&gt;If we think about ecological breakdown; there are two problems: &lt;em&gt;1. Climate
+change and 2. the accelerated destruction of biodiversity.&lt;&#x2F;em&gt; Human-induced climate change includes
+both global warming and the resulting large-scale shifts in weather patterns.
+While the most dreadful outcome of global warming is still awaited, ruination
+of the environment is already affecting our food, water and air.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-world-we-are-creating&quot;&gt;The world we are creating&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-world-we-are-creating&quot; aria-label=&quot;Anchor link for: the-world-we-are-creating&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Our world is getting hotter. Over the next two decades projections tell us that temperature in some areas of
+the globe will rise even higher, the future will remain uncertain for a lot of
+people (and by that, I mean you, me and our families). Everyone is extremely
+vulnerable. Rise in sea levels due to melting of the ice sheets, permafrost
+spewing greenhouse gases, wildfires, mudslides, floods and severe tornados are making
+our lives miserable.&lt;&#x2F;p&gt;
+&lt;p&gt;While everyone is debating carbon neutrality, we are accelerating the
+destruction of what enables us to live.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We are destroying the soils with our non-biodegradable waste and shameless use of
+fetilizers&lt;&#x2F;li&gt;
+&lt;li&gt;We are buying stuff with a lot of useless packaging&lt;&#x2F;li&gt;
+&lt;li&gt;We are buying gadgets (manufactured in distant places of the world, transported and delivered to our doorsteps) which are replaced every 2-3 years with new gadgets&lt;&#x2F;li&gt;
+&lt;li&gt;We are buying new cars with bigger infotainment systems and improved visual
+aesthetics&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-future-we-choose&quot;&gt;The future we choose&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-future-we-choose&quot; aria-label=&quot;Anchor link for: the-future-we-choose&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;52117860-the-future-we-choose&quot;&gt;The actions we pursue are largely defined by the mindset we cultivate in advance of the doing. When we are faced with an urgent task, it may feel counterintutuive to first look inside ourselves, but it is essential.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;While I&#x27;m not going to pretend to know how to solve these problems, here&#x27;s what
+I consider are few good ideas to improve the quality of human life for
+centuries to come.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Eliminating waste&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;The primary step to reduce waste is &lt;em&gt;repairability&lt;&#x2F;em&gt;. We must buy stuff for
+life, from companies that embrace repairability. Things break, which is normal but we or a trained technician should be able to repair it.&lt;&#x2F;li&gt;
+&lt;li&gt;Reject new technology like Next-gen gaming consoles, mobile devices with 5G
+support and other single purpose gadgets. Sure, 5G allows you to stream in 4k
+but does it really matter on a 6-inch form factor?&lt;&#x2F;li&gt;
+&lt;li&gt;Don&#x27;t buy gadgets that are used less than a few times in a year. Only buy
+multi purpose stuff.&lt;&#x2F;li&gt;
+&lt;li&gt;Fix stuff around you.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Eliminating pollution&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&#x27;t own a car, use a bicycle or public transport.&lt;&#x2F;li&gt;
+&lt;li&gt;Reduce transportation by adopting remote work and planning less holidays to
+the other side of the planet. Keep in mind transportation is not only your
+personal transportation, it’s also the transportation of everything you use and
+eat: Food, gadgets, materials, appliances.&lt;&#x2F;li&gt;
+&lt;li&gt;Live rural, buy local. Start a mostly vegetarian diet.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;At this point we have a responsibility to do what is necessary, and for most of
+us that will involve some deliberate reprogramming of our minds.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;interesting-projects&quot;&gt;Interesting projects&lt;a class=&quot;zola-anchor&quot; href=&quot;#interesting-projects&quot; aria-label=&quot;Anchor link for: interesting-projects&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;frame.work&#x2F;&quot;&gt;The Framework Laptop&lt;&#x2F;a&gt;; fixing the consumer elctronics
+industry by desiging products to last.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.opensourceecology.org&#x2F;&quot;&gt;Open Source Ecology&lt;&#x2F;a&gt;; focused on building an efficient economy while sharing
+and innovating by open collaboration.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>HTTP&#x2F;3 - HTTP over QUIC</title>
+		<published>2019-10-25T15:01:03-05:00</published>
+		<updated>2019-10-25T15:01:03-05:00</updated>
+		<link href="https://rootbid.github.io/writings/quic/" type="text/html"/>
+		<id>https://rootbid.github.io/writings/quic/</id>
+		<content type="html">&lt;p&gt;As I am sipping down my morning coffee and read my Twitter feed, my app is making multiple API calls over HTTPS to Twitter&#x27;s servers somewhere on the Internet. Those HTTPS connections are running over TCP via my home WiFi and broadband connection. All&#x27;s well, the WiFi connection has the least inference, the broadband connection is stable and so there&#x27;s no packet loss. Those are perfect conditions for HTTPS running over TCP. Not a packet dropped, no congestion. HTTP&#x2F;2 loves these perfect conditions too, where multiple streams of requests and responses are being transferred between my phone and servers. Unlike HTTP&#x2F;1.1, HTTP&#x2F;2 is able to use a single TCP connection for multiple, simultaneous requests with a significant speed advantage under similar conditions.&lt;&#x2F;p&gt;
+&lt;p&gt;As my day boots, I step out of my house to be at work. My phone silently switches from my home WiFi to 4G changing the IP address associated with my phone, the TCP connections in use between my phone and Twitter&#x27;s servers are now in trouble. The connections either stall or get dropped with a delay while internal timers informs my app that the cnnections have disappeared or as connections are re-established. All the connections are suddenly silent.&lt;&#x2F;p&gt;
+&lt;p&gt;It might be tempting to blame it on my ISP, but in actual Internet was not designed to work this way. We weren&#x27;t meant to be carrying around pocket supercomputers that roam across lossy, noisy networks all the while trying to remain productive while complaining about sub-seccond delays in app response time.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;quic-quick-udp-internet-connections&quot;&gt;QUIC (Quick UDP Internet Connections)&lt;a class=&quot;zola-anchor&quot; href=&quot;#quic-quick-udp-internet-connections&quot; aria-label=&quot;Anchor link for: quic-quick-udp-internet-connections&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;A proposed solution to these problems is QUIC (Quick UDP Internet Connections), a new transport designed from the ground up to improve performance for HTTPS traffic with a new way to send packets across the Internet.&lt;&#x2F;p&gt;
+&lt;p&gt;QUIC is an encrypted-by-default Internet transfer protocol, which replaces most of the traditional HTTPS stack: HTTP&#x2F;2, TLS and TCP. QUIC makes an HTTPS connection between a computer and server with a collection of technologies:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UDP replacing TCP.&lt;&#x2F;strong&gt; UDP is widely used for fire-and-forget protocols where packets are sent but their arrival or ordering in not guranteed (while TCP guarantees arrival order and delivery at a cost). Because UDP doesn&#x27;t have TCP&#x27;s guarantees it allows developers to innovate new protocols (on top of UDP) that do guarantee delivery and ordering and can incorporate features that TCP lacks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;quic&#x2F;HTTP_3_stack.jpg&quot; alt=&quot;HTTP&#x2F;2 stack vs HTTP&#x2F;3 stack&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reliable data transfers.&lt;&#x2F;strong&gt; While UDP is not a reliable transport, QUIC adds a layer on top of UDP that introduces reliability. It offers re-transmission of packets, congestion control, pacing and other features otherwise present in TCP.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multiple streams within connections.&lt;&#x2F;strong&gt; Similar to SCTP, SSH and HTTP&#x2F;2, QUIC features separate logical streams within the physical connections (parallel streams, transferring data simultaneously over a single connection without affecting the others). A connection is a negotiated setup between two end-points similar to how TCP works. A QUIC connection is made to a UDP port and IP address, but once established the connection is associated by its &lt;em&gt;&#x27;connnection ID&#x27;&lt;&#x2F;em&gt;.
+Over an established connection, either side can create streams and send data to the other end.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;In order delivery.&lt;&#x2F;strong&gt; QUIC guarantees in-order delivery of streams independently. This means that each stream will send data and maintain data order, but different streams may be delivered out-of-order.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Fast handshakes.&lt;&#x2F;strong&gt; QUIC offers both 0-RTT and 1-RTT connection setups, meaning that at best QUIC needs no extra round-trips at all when setting up a new connection.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;cloudplatform.googleblog.com&#x2F;2018&#x2F;06&#x2F;Introducing-QUIC-support-for-HTTPS-load-balancing.html&quot;&gt;&lt;img src=&quot;&#x2F;img&#x2F;quic&#x2F;handshakes.gif&quot; alt=&quot;handshakes&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Early data.&lt;&#x2F;strong&gt; QUIC allows a client to include data in the 0-RTT handshake. This feature allows a client to deliver data to the peer as fast as it possibly can, and that then of course allows the server to respond and send data back even sooner.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TLS 1.3&lt;&#x2F;strong&gt; QUIC&#x27;s transport security is TLS 1.3 (&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;tools.ietf.org&#x2F;html&#x2F;rfc8446https:&#x2F;&#x2F;tools.ietf.org&#x2F;html&#x2F;rfc8446&quot;&gt;RFC 8446&lt;&#x2F;a&gt;) and there are never any unencrypted QUIC connections.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transport and Application level.&lt;&#x2F;strong&gt; QUIC is a transport protocol, which allows the use to other application protocols. The initial application layer protocol is HTTP&#x2F;3.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;HTTP&#x2F;3 over QUIC.&lt;&#x2F;strong&gt; HTTP&#x2F;3 does HTTp-style transports, including HTTP header compression using QPACK - which is similar to HTTP&#x2F;2 compression named HPACK.
+The HPACk algorithm depends on an ordered delivery of streams so it was not possible to reuse it for HTTP&#x2F;3, since QUIC offers streams that can be delivered out-of-order.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;the-hyper-text-transfer-protocol&quot;&gt;The Hyper Text Transfer Protocol&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-hyper-text-transfer-protocol&quot; aria-label=&quot;Anchor link for: the-hyper-text-transfer-protocol&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;HTTP powers the Web(Internet), it&#x27;s life began with the HTTP&#x2F;0.9 protocol in 1991. By 1997 it had evolved to HTTP&#x2F;1.1, which was standardised within the IETF (Internet Engineering Task Force). After a long life adoption of the protocol and growing number of users on the Web, the ever changing needs on the Web called for a better suited protocol, which is now known as HTTP&#x2F;2 emerging in 2015. More recently the IETF is intending to deliver a new version - HTTP&#x2F;3. The motivation for a new protocol was to overcome inefficiencies by the latter facing today’s complexity of the Web.&lt;&#x2F;p&gt;
+&lt;p&gt;HTTP&#x2F;3 is promising, it is set to deliver better performance and security on the Web. Cloudflare, Mozilla and Google have already started implementations while working closely with IETF peers. Open source software and communities have also tracked the advancements in the protocol, implemeting experimental support in their projects (&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;HTTP3&quot;&gt;announcement for HTTP&#x2F;3 support in curl&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;projects&quot;&gt;Projects&lt;a class=&quot;zola-anchor&quot; href=&quot;#projects&quot; aria-label=&quot;Anchor link for: projects&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quicwg&#x2F;base-drafts&#x2F;wiki&#x2F;Implementations&quot;&gt;Implementations of the QUIC transport protocol&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;suggested-readings&quot;&gt;Suggested Readings&lt;a class=&quot;zola-anchor&quot; href=&quot;#suggested-readings&quot; aria-label=&quot;Anchor link for: suggested-readings&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;the-road-to-quic&#x2F;&quot;&gt;The Road to QUIC&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;quicwg.org&#x2F;base-drafts&#x2F;draft-ietf-quic-http.html&quot;&gt;HTTP Version 3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;datatracker.ietf.org&#x2F;doc&#x2F;draft-ietf-quic-transport&#x2F;?include_text=1&quot;&gt;QUIC (Active Internet-draft)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
+</feed>
