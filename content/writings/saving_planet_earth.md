@@ -3,9 +3,9 @@ title: "Saving planet Earth"
 date: 2021-10-02T12:52:10+05:30
 draft: false
 tags:
-  - Sustainability
-  - Climate
-  - Humanity
+  - sustainability
+  - climate
+  - humanity
 ---
 
 Atmosphere is what allows life on Earth, it's a layer of gases surrounding the

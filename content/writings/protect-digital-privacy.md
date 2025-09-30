@@ -2,6 +2,9 @@
 title: "Protect your digital privacy"
 date: 2022-11-15T15:22:17+05:30
 draft: false
+tags: 
+  - privacy
+  - internet
 ---
 Digital privacy is a growing concern in the modern world, where technology allows us to share more personal information online than ever before. As we increasingly rely on the internet to communicate, shop, and access entertainment, it's important to take steps to protect our digital privacy. Here are some of the most important things you can do to protect your digital privacy,
 1. Use strong and unique passwords for your online accounts. Avoid using the same password for multiple accounts, and make sure your passwords are long and complex to make them difficult to guess. Use a password manager.

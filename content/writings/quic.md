@@ -2,11 +2,10 @@
 title: "HTTP/3 - HTTP over QUIC"
 date: 2019-10-25T15:01:03-05:00
 draft: false
-toc: false
 tags: 
   - HTTP/3
   - QUIC
-  - Internet
+  - internet
 description: "A gentle Theoretical Introduction."
 ---
 
